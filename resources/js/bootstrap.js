@@ -8,6 +8,15 @@ window._ = require('lodash');
 
 window.axios = require('axios');
 
+// Bootstrap
+try {
+    window.$ = window.jQuery = require('jquery');
+    require('select2');
+    $('#bee').select2({
+        width: '100%'
+    });
+} catch (e) {}
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
