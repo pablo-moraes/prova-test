@@ -1,0 +1,25 @@
+/* Override Select2 Rules */
+.select2-container--default .select2-selection--multiple {
+    width: 75vw;
+    height: 45px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    border-right: none !important;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: $pink !important;
+    color: white; }
+
+.select2-selection__choice {
+    border-radius: 5px !important;
+    background: #d1d2d4 !important;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .select2-container--default .select2-selection--multiple {
+        width: 66.5vw;
+    }
+}

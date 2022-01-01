@@ -21,14 +21,14 @@
     <script src="{{ asset('js/all.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased">
-<div class="min-h-screen bg-gray-100">
+<div class="min-h-screen bg-white">
     <!-- Page Heading -->
-    <header class="bg-white shadow mx-20">
+    <header class="bg-white mx-20">
             @yield('bee-header')
     </header>
 
     <!-- Page Content -->
-    <main class="bg-white shadow mx-20">
+    <main class="bg-white mx-20">
         @yield('bee-content')
     </main>
 </div>

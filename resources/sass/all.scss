@@ -1,3 +1,10 @@
 @import "~select2/dist/css/select2.css";
 @import 'variables';
 @import 'home';
+@import 'select2/custom-style';
+
+*,
+*::before,
+*::after {
+    color: $text;
+}

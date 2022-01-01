@@ -27,62 +27,11 @@
                 </select>
                 </div>
             </div>
-            <div class="home-content__checkbox mx-20 mt-5 flex flex-col justify-start">
+            <div class="home-content__checkbox xl:mx-20 lg:mx-18 md:mx-12 sm:mx-5 mx-4 mt-5 flex flex-col justify-start">
                 <p>Escolha os meses</p>
-                <ul class="flex flex-row flex-wrap gap-5 justify-start checkbox-months ">
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span class="text-center">Jan</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Fev</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Mar</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Abr</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Maio</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Jun</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Jul</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Ago</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Set</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Out</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Nov</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="months" id="flower-months">
-                        <span>Dez</span>
-                    </li>
+                <ul class="flex flex-row flex-wrap gap-5 justify-start checkbox-months mt-2">
                 </ul>
             </div>
         </form>
     </div>
-    <script>
-        $("#bee").select2();
-    </script>
 @endsection
