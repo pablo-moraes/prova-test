@@ -15,8 +15,8 @@ class CreateBeeSpeciesTable extends Migration
     {
         Schema::create('bee_species', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('scientific_name');
+            $table->string('name')->unique();
+            $table->string('scientific_name')->unique();
             $table->timestamps();
         });
     }

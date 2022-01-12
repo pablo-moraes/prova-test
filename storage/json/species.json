@@ -1,0 +1,94 @@
+{
+	"0":{
+		"name": "Uruçu",
+		"scientific_name": "Melipona scutellaris"
+	},
+	"1": {
+	"name": "Uruçu-Amarela",
+	"scientific_name": "Melipona rufiventris"
+	},
+	"2":{
+	"name": "Guarupu",
+	"scientific_name": "Melipona bicolor"
+	},
+	"3":{
+	"name": "Iraí",
+	"scientific_name": "Nannotrigona testaceicornes"
+	},
+	"4":{
+	"name": "Jataí",
+	"scientific_name": "Tetragonisca angustula"
+	},
+	"5":{
+	"name": "Jataí-da-Terra",
+	"scientific_name": "Paratrigona subnuda"
+	},
+	"6":{
+	"name": "Mandaçaia",
+	"scientific_name": "Melipona mandaçaia"
+	},
+	"7":{
+	"name": "Manduri",
+	"scientific_name": "Melipona marginata"
+	},
+	"8":{
+	"name": "Tubuna",
+	"scientific_name": "Scaptotrigona bipunctata"
+	},
+	"9":{
+	"name": "Mirim Droryana",
+	"scientific_name": "Plebeia droryana"
+	},
+	"10":{
+	"name": "Mirim-Guaçu",
+	"scientific_name": "Plebeia remota"
+	},
+	"11":{
+	"name": "Mirim-Preguiça",
+	"scientific_name": "Friesella Schrottkyi"
+	},
+	"12":{
+	"name": "Lambe-Olhos",
+	"scientific_name": "Leurotrigona muelleri"
+	},
+	"13":{
+	"name": "Borá",
+	"scientific_name": "Tetragona clavipes"
+	},
+	"14":{
+	"name": "Boca-de-Sapo",
+	"scientific_name": "Partamona helleri"
+	},
+	"15":{
+	"name": "Guira",
+	"scientific_name": "Geotrigona mombuca"
+	},
+	"16":{
+	"name": "Marmelada Amarela",
+	"scientific_name": "Frieseomelitta varia"
+	},
+	"17":{
+	"name": "Mombucão",
+	"scientific_name": "Cephalotrigona capitata"
+	},
+	"18":{
+	"name": "Guiruçu",
+	"scientific_name": "Schwarziana quadripunctata"
+	},
+	"19":{
+	"name": "Tataíra",
+	"scientific_name": "Oxytrigona tataira tataira"
+	},
+	"20":{
+	"name": "Irapuã",
+	"scientific_name": "Trigona spinipes"
+	},
+	"21":{
+	"name": "Abelha-Limão",
+	"scientific_name": "Lestrimelitta limao"
+	},
+	"22":{
+	"name": "Bieira",
+	"scientific_name": "Mourella caerulea"
+	}
+}
