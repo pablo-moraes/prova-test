@@ -539,16 +539,16 @@
   width: 100%;
 }
 .home-header__title {
-  color: #dd6991;
+  color: #c87092;
   font-family: "IBM Plex Sans";
 }
 .home-header__button {
   min-width: 200px;
   border-color: rgba(200, 112, 146, 0.43);
-  color: #ffb2cd;
+  color: #ffbed7;
 }
 .home-header__button:hover {
-  background: #ffb2cd;
+  background: #ffbed7;
   color: white;
   border-color: transparent;
 }
@@ -556,32 +556,58 @@
 .home-content__select label {
   align-self: self-start;
 }
-.home-content__checkbox .checkbox-months li {
-  width: 60px;
-  height: 60px;
-  border-radius: 4px;
-  position: relative;
-  border: 1px solid rgba(245, 246, 248, 0.3);
-}
-.home-content__checkbox .checkbox-months li input, .home-content__checkbox .checkbox-months li span {
+
+.register-header {
+  background: url(/images/bg-header.png?c5757049cfd785b8ab16d73d4fe70377) center no-repeat;
   width: 100%;
-  height: 100%;
-  border-radius: 4px;
+  height: 400px;
 }
-.home-content__checkbox .checkbox-months li input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+.register-header h1 {
+  font-family: "IBM Plex Sans";
+  font-weight: 700;
+  letter-spacing: 0.1rem;
 }
-.home-content__checkbox .checkbox-months li input:checked ~ span {
-  background: #ffb2cd;
+
+.register-buttons__cancel {
+  width: 200px;
+  border: 2px solid #ffbed7;
+  color: #ffbed7;
+}
+.register-buttons__cancel:hover {
+  background: #ffbed7;
   color: white;
 }
-.home-content__checkbox .checkbox-months li span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
+.register-buttons__submit {
+  width: 200px;
+  background: #ffbed7;
+  color: white;
+}
+.register-buttons__submit:hover {
+  background: #c87092;
+}
+
+.register-footer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.register-footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  height: 225px;
+  background: url(/images/bg-flower1.png?e5efc882c645703b4db164d649ca7c55) left/100% no-repeat;
+}
+.register-footer::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 225px;
+  background: url(/images/bg-flower2.png?bd3bc70998f36209387dd9737601fcb0) bottom/100% no-repeat;
 }
 
 /* Override Select2 Rules */
@@ -590,12 +616,17 @@
   height: 45px;
 }
 
+.register-select .select2-container--default .select2-selection--multiple {
+  width: 87vw;
+  height: 45px;
+}
+
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   border-right: none !important;
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #dd6991 !important;
+  background-color: #c87092 !important;
   color: white;
 }
 
@@ -614,4 +645,32 @@
 *::before,
 *::after {
   color: #494949;
+}
+
+.checkbox-months li {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  position: relative;
+  border: 1px solid rgba(119, 119, 119, 0.5);
+}
+.checkbox-months li input, .checkbox-months li span {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.checkbox-months li input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox-months li input:checked ~ span {
+  background: #ffbed7;
+  color: white;
+}
+.checkbox-months li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }

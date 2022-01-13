@@ -7,8 +7,8 @@
             <p class="mt-20">Neste calendário encontram-se diversas flores. Podem ser agrupadas pelos meses que florescem e o pelo tipo de abelha que poliniza a flor.</p>
         </div>
         <div class="home-header__right-content flex flex-col">
-            <button type="button" class="home-header__button p-2 border rounded font-bold"><a href="">Cadastrar flor</a></button>
-            <button type="button" class="home-header__button p-2 border rounded mt-4 font-bold"><a href="">Cadastrar abelha</a></button>
+            <a href="{{ route('flower') }}" class="home-header__button p-2 border rounded font-bold text-center">Cadastrar flor</a>
+            <a href="{{ route('bee') }}" class="home-header__button p-2 border rounded mt-4 font-bold text-center">Cadastrar abelha</a>
         </div>
     </div>
 @endsection
@@ -20,17 +20,15 @@
                 <div class="flex flex-col items-center">
                     <label for="bee">Selecione as abelhas</label>
                     <select name="states[]" multiple="multiple" id="bee" class="min-w-full h-16">
-                    <option value="ol">Abacate</option>
-                    <option value="al">Abacaxi</option>
-                    <option value="li">Abacatão</option>
-                    <option value="ae">Abacatone</option>
-                </select>
+                        @foreach($species as $specie)
+                            <option value="{{ $specie->name }}"> {{ $specie->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <div class="home-content__checkbox xl:mx-20 lg:mx-18 md:mx-12 sm:mx-5 mx-4 mt-5 flex flex-col justify-start">
                 <p>Escolha os meses</p>
-                <ul class="flex flex-row flex-wrap gap-5 justify-start checkbox-months mt-2">
-                </ul>
+                <ul class="flex flex-row flex-wrap gap-5 justify-start checkbox-months mt-2"></ul>
             </div>
         </form>
     </div>

@@ -25,40 +25,4 @@
             align-self: self-start;
         }
     }
-
-    &__checkbox {
-        .checkbox-months {
-            li {
-                width: 60px;
-                height: 60px;
-                border-radius: 4px;
-                position: relative;
-                border: 1px solid rgba(245, 246, 248, 0.3);
-                input, span {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 4px;
-                }
-                input {
-                    position: absolute;
-                    opacity: 0;
-                    cursor: pointer;
-                }
-
-                input:checked ~ span{
-                    background: $light-pink;
-                    color: white;
-                }
-
-                span {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-weight: bold;
-                }
-            }
-        }
-
-
-    }
 }
