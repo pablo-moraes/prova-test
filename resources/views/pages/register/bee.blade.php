@@ -8,6 +8,7 @@
 
 @section('bee-content')
     <section>
-        <p class="text-gray-800 text-center text-md">Cadastre as abelhas</p>
+        <p class="text-gray-800 text-left text-xl mb-5">Cadastre as abelhas</p>
+        @include('pages.forms.create-bee')
     </section>
 @endsection

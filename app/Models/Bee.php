@@ -9,4 +9,9 @@ class Bee extends Model
 {
     use HasFactory;
     protected $table = "bee_species";
+
+    protected $fillable = [
+        'name',
+        'scientific_name'
+    ];
 }
