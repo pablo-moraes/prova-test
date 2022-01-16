@@ -539,7 +539,7 @@
   width: 100%;
 }
 .home-header__title {
-  color: #c87092;
+  color: #F4659C;
   font-family: "IBM Plex Sans";
 }
 .home-header__button {
@@ -555,6 +555,10 @@
 
 .home-content__select label {
   align-self: self-start;
+}
+
+.register-header {
+  max-width: 100%;
 }
 
 .register-header {
@@ -583,7 +587,7 @@
   color: white;
 }
 .register-buttons__submit:hover {
-  background: #c87092;
+  background: #f6a9c8;
 }
 
 .register-footer {
@@ -610,15 +614,55 @@
   background: url(/images/bg-flower2.png?bd3bc70998f36209387dd9737601fcb0) bottom/100% no-repeat;
 }
 
+.register-upload-image {
+  width: 180px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #ffbed7;
+  position: relative;
+}
+.register-upload-image::after {
+  content: "";
+  background: url(/images/upload-icon.svg?b898d76191e356235acd5b21430243b1);
+  width: 50px;
+  height: 50px;
+}
+.register-upload-image:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #1a202c;
+  opacity: 0.2;
+}
+.register-upload-image img {
+  width: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.register-upload-image input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: blue;
+  opacity: 0;
+  cursor: pointer;
+}
+
 /* Override Select2 Rules */
 .select2-container--default .select2-selection--multiple {
   width: 75vw;
-  height: 45px;
+  height: auto;
+  min-height: 45px;
 }
 
 .register-select .select2-container--default .select2-selection--multiple {
   width: 87vw;
-  height: 45px;
+  height: auto;
+  min-height: 45px;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
@@ -626,7 +670,7 @@
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #c87092 !important;
+  background-color: #F4659C !important;
   color: white;
 }
 
@@ -636,15 +680,29 @@
   font-weight: 600;
 }
 
+.select2-container--default .select2-results__option--selected {
+  display: none !important;
+}
+
 @media (max-width: 1024px) {
   .select2-container--default .select2-selection--multiple {
     width: 66.5vw;
+  }
+
+  .register-select .select2-container--default .select2-selection--multiple {
+    width: 74vw;
+    height: auto;
+    min-height: 45px;
   }
 }
 *,
 *::before,
 *::after {
   color: #494949;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 .checkbox-months li {

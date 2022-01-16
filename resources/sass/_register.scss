@@ -1,5 +1,9 @@
 .register-header {
-    background: url("../../public/img/bg-header.png") center no-repeat;
+    max-width: 100%;
+}
+
+.register-header {
+    background: url("../../public/images/bg-header.png") center no-repeat;
     width: 100%;
     height: 400px;
 
@@ -15,6 +19,7 @@
         width: 200px;
         border: 2px solid $light-pink;
         color: $light-pink;
+
         &:hover {
             background: $light-pink;
             color: white;
@@ -26,7 +31,7 @@
         background: $light-pink;
         color: white;
         &:hover {
-            background: $pink;
+            background: #f6a9c8;
         }
     }
 }
@@ -35,6 +40,7 @@
     position: relative;
     width: 100%;
     height: 300px;
+
     &::after {
         content: "";
         position: absolute;
@@ -42,7 +48,7 @@
         bottom: 0;
         width: 300px;
         height: 225px;
-        background: url("../../public/img/bg-flower1.png") left/100% no-repeat;
+        background: url("../../public/images/bg-flower1.png") left/100% no-repeat;
     }
 
     &::before {
@@ -52,6 +58,50 @@
         bottom: 0;
         width: 300px;
         height: 225px;
-        background: url("../../public/img/bg-flower2.png") bottom/100% no-repeat;
+        background: url("../../public/images/bg-flower2.png") bottom/100% no-repeat;
+    }
+}
+
+.register-upload-image {
+    width: 180px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: $light-pink;
+    position: relative;
+    //&:hover {
+    //    background: $pink;
+    //}
+    &::after {
+        content: '';
+        background: url("../../public/images/upload-icon.svg");
+        width: 50px;
+        height: 50px;
+    }
+
+    &:hover::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #1a202c;
+        opacity: 0.2;
+    }
+
+    img {
+        width: 45px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: blue;
+        opacity: 0;
+        cursor: pointer;
     }
 }

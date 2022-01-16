@@ -8,7 +8,7 @@
 
 @section('bee-content')
     <section>
-        <p class="text-gray-800 text-center text-md">Cadastre as flores de acordo com o mês em que ela floresce</p>
+        <p class="text-gray-800 text-left text-xl mb-5">Cadastre as flores de acordo com o mês em que ela floresce</p>
         @include('pages.forms.create-flower')
     </section>
 @endsection

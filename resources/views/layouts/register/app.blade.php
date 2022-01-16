@@ -28,7 +28,7 @@
     </header>
 
     <!-- Page Content -->
-    <main class="bg-white mx-20">
+    <main class="bg-white mx-5 md:mx-20 lg:mx-20 xl:mx-20 sm:mx-20 register-content">
         @yield('bee-content')
     </main>
     <footer class="register-footer">
