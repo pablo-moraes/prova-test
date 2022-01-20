@@ -31,3 +31,6 @@ Route::prefix('/register')->group(function () {
     Route::post('/flower', [FlowerController::class, 'store'])->name('register.flower');
     Route::get('/flower', [FlowerController::class, 'create'])->name('flower');
 });
+
+Route::get('/list-flowers', [FlowerController::class, 'list'])->name('flower.list');
+Route::get('/flower/{id}', [FlowerController::class, 'find'])->name('flower.find');

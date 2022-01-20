@@ -22,11 +22,11 @@ class Flower extends Model
 
     public function setBeesAttribute($value)
     {
-        $this->attributes['bees'] = implode(',', $value);
+        $this->attributes['bees'] = implode(', ', $value);
     }
 
     public function setMonthsAttribute($value)
     {
-        $this->attributes['months'] = implode(',', $value);
+        $this->attributes['months'] = implode(', ', $value);
     }
 }

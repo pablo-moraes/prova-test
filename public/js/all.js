@@ -1,9 +1,8 @@
 $(document).ready(() => {
     fillMonths();
-    window.onload = () => {
-        $('html').animate({
-            scrollTop: $('.register-content form').offset().top/2
-        })
+
+    if($('.register-content').length > 0) {
+        $('html').scrollTop($('.register-content form').offset().top/2)
     }
 });
 

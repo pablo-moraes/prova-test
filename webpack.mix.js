@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .copy('resources/js/all.js', 'public/js')
+    .copy('resources/js/flowers/list.js', 'public/js/flowers')
     .sass('resources/sass/all.scss', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),

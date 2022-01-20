@@ -32,6 +32,7 @@
 @media (max-width: 1024px) {
     .select2-container--default .select2-selection--multiple {
         width: 66.5vw;
+        min-width: 80vw;
     }
 
     .register-select .select2-container--default .select2-selection--multiple {

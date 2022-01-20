@@ -23,8 +23,8 @@ class FlowerController extends Controller
         $validated = $request->validated();
 
         if ($isValid) {
-            $fileName = Str::of(Str::lower(Str::snake($request->name)))->append('.png');
-            $pathName = Str::of(Str::lower(Str::kebab($request->name)))->prepend('flowers/');
+            $fileName = Str::of(Str::lower(Str::snake(Str::ascii($request->name))))->append('.png');
+            $pathName = Str::of(Str::lower(Str::kebab(Str::ascii($request->name))))->prepend('flowers/');
             $storagePath = $request->file('photo')->storeAs("$pathName", "$fileName");
         }
 
@@ -38,5 +38,48 @@ class FlowerController extends Controller
         ]);
 
         return redirect(route('home'));
+    }
+
+    public function list(Request $request)
+    {
+        try {
+            $flowers =  Flower::all();
+            $hasRequest = count($request->all()) > 0;
+            if($hasRequest) {
+                $flowers = collect($flowers)->filter(function($flower, $key) use ($request) {
+                    $months = $request->months;
+                    $bees = $request->bees;
+
+                    if ($months !== null && $bees !== null) {
+                        return Str::containsAll($flower->months, $months) && Str::containsAll($flower->bees, $bees);
+                    }
+
+                    if (!is_null($months) && is_null($bees)) {
+                        return Str::containsAll($flower->months, $months ?? '');
+                    }
+
+//                    dump($flower->bees);
+                    return Str::containsAll($flower->bees, $bees ?? '');
+
+                })->toBase();
+            }
+
+            return response()->json([
+               'type' => 'success',
+               'flowers' => $flowers
+           ]);
+        } catch (\Throwable $e) {
+            return response()->json([
+                'type' => $e->getMessage(),
+                'erro' => $e->getMessage(),
+                'message' => 'Não foi possível'
+            ]);
+        }
+    }
+
+    public function find($id)
+    {
+        $flower = Flower::query()->findOrFail($id);
+        return response()->json(['flower' => $flower]);
     }
 }
