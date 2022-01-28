@@ -24,7 +24,7 @@
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-white">
     <!-- Page Heading -->
-    <header class="bg-white mx-20">
+    <header class="bg-white xl:mx-20 lg:mx-18 md:mx-12 sm:mx-5 mx-4">
             @yield('bee-header')
     </header>
 

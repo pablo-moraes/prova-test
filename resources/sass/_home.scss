@@ -1,6 +1,10 @@
 .home-header {
     padding-top: 3rem;
     width: 100%;
+
+    @media (max-width: 640px) {
+        grid-template-columns: 10fr 2fr;
+    }
     &__title {
         color: $pink;
         font-family: $IBM;
@@ -10,12 +14,137 @@
         min-width: 200px;
         border-color: rgba(200, 112, 146, 0.43);
         color: $light-pink;
+        @media(max-width: 810px) {
+            display: none;
+        }
 
         &:hover {
             background: $light-pink;
             color: white;
             border-color: transparent;
         }
+    }
+
+    &__burger-menu {
+        width: 35px;
+        height: 5px;
+        background: $pink;
+        border-radius: 2px;
+        position: relative;
+
+        //display: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 35px;
+            height: 5px;
+            //display: none;
+            background: inherit;
+            border-radius: 2px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 35px;
+            height: 5px;
+            background: inherit;
+            border-radius: 2px;
+        }
+    }
+
+    &__menu-mobile {
+        display: none;
+        top: 10vh;
+        border-radius: 5px;
+        background: $light-pink;
+        li {
+            min-width: 175px;
+            text-align: center;
+            color: white;
+            height: 45px;
+            line-height: 2.75rem;
+
+            border-radius: 0 0 5px 5px;
+
+            &:first-child {
+                border-radius: 5px 5px 0 0;
+            }
+
+            &:hover {
+                background: rgba(172, 20, 61, 0.47);
+            }
+        }
+
+        &::before {
+            content: "";
+            border-color: transparent transparent $light-pink transparent;
+            border-width: 10px;
+            width: 8px;
+            height: 8px;
+            top: -19px;
+            left: 75%;
+            position: absolute;
+
+            &:hover {
+                border-color: transparent transparent rgba(172, 20, 61, 0.47) transparent;
+
+            }
+        }
+    }
+
+    //&__burger-menu-container {
+    //    @media(min-width: 811px) {
+    //        display: none;
+    //    }
+    //}
+    nav {
+        &:hover {
+            .home-header {
+                &__burger-menu-container button {
+                    transform: rotate(45deg);
+                    top: 5px;
+                    &::after {
+                        top: 0;
+                        transform: rotate(90deg);
+                    }
+                    &::before {
+                        top: 0;
+                    }
+                }
+
+                &__menu-mobile {
+                    display: block;
+                }
+            }
+
+
+        }
+    }
+
+    &__burger-menu-container {
+        top: 0;
+        transform: translateY(-0.7rem);
+        @media(min-width: 811px) {
+            display: none;
+        }
+
+        //&:hover button {
+        //    transform: rotate(45deg);
+        //    top: 5px;
+        //    &::after {
+        //        top: 0;
+        //        transform: rotate(90deg);
+        //    }
+        //    &::before {
+        //        top: 0;
+        //    }
+        //}
     }
 }
 
