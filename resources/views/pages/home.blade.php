@@ -59,7 +59,7 @@
 
             </ul>
         </article>
-        <div class="absolute bottom-11 left-2/4 mx-auto w-full">
+{{--        <div class="absolute bottom-11 left-2/4 mx-auto w-full">
             <ul class="flex flex-row flex-wrap gap-5 justify-center mt-2 home-header-pagination">
                 <li class="bg-pink-400 p-2 previous">Previous</li>
                 <li class="bg-pink-400 p-2"><a href=""></a>1</li>
@@ -70,7 +70,7 @@
                 <li class="bg-pink-400 p-2">6</li>
                 <li class="bg-pink-400 p-2 next">Next</li>
             </ul>
-        </div>
+        </div>--}}
 
     </div>
 @endsection
